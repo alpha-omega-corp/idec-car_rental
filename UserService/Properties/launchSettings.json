@@ -1,0 +1,30 @@
+﻿{
+  "$schema": "https://json.schemastore.org/launchsettings.json",
+  "profiles": {
+    "http": {
+      "commandName": "Project",
+      "launchBrowser": false,
+      "environmentVariables": {
+        "DB_HOST": "127.0.0.1",
+        "DB_PORT": "5432",
+        "DB_USER": "user",
+        "DB_PASSWORD": "user",
+        "DB_NAME": "user",
+        "DB_SCHEMA": "public",
+        "ASPNETCORE_ENVIRONMENT": "http",
+        "JWT_SECRET": "secret"
+      },
+      "dotnetRunMessages": true,
+      "applicationUrl": "http://localhost:5200"
+    },
+    "https": {
+      "commandName": "Project",
+      "dotnetRunMessages": true,
+      "launchBrowser": false,
+      "applicationUrl": "https://localhost:7106;http://localhost:5213",
+      "environmentVariables": {
+        "ASPNETCORE_ENVIRONMENT": "Development"
+      }
+    }
+  }
+}
