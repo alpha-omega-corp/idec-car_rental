@@ -6,7 +6,6 @@ namespace CarRental.Repositories;
 
 public class UserRepository(Connection database)
 {
-
     public async void Create(User user)
     {
         try
