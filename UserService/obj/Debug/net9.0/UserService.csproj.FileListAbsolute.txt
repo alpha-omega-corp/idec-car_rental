@@ -94,3 +94,5 @@
 /home/nanstis/RiderProjects/CarRental/UserService/bin/Debug/net9.0/runtimes/win-x86/native/Microsoft.Data.SqlClient.SNI.dll
 /home/nanstis/RiderProjects/CarRental/UserService/bin/Debug/net9.0/Microsoft.AspNetCore.Authentication.JwtBearer.dll
 /home/nanstis/RiderProjects/CarRental/UserService/bin/Debug/net9.0/BCrypt.Net-Next.dll
+/home/nanstis/RiderProjects/CarRental/UserService/obj/Debug/net9.0/UserService.sourcelink.json
+/home/nanstis/RiderProjects/CarRental/UserService/bin/Debug/net9.0/Dapper.dll

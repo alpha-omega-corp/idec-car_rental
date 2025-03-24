@@ -1,4 +1,4 @@
-using System.Data;
+using Dapper;
 using CarRental.Database;
 using CarRental.Domain;
 
@@ -24,9 +24,7 @@ public class UserRepository(Connection database)
 
     public User GetOne(string email)
     {
-        using var cmd = database.Request()
-            .CreateCommand($"SELECT * FROM users WHERE email = '{email}'");
-        
-        return cmd.ExecuteReader().Cast<User>().First();
+        return database.Request().OpenConnection().QuerySingle<User>(sql:
+            $"SELECT * FROM users WHERE email = '{email}';");
     }
 }

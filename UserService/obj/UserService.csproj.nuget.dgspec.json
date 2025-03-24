@@ -48,6 +48,10 @@
               "target": "Package",
               "version": "[4.0.3, )"
             },
+            "Dapper": {
+              "target": "Package",
+              "version": "[2.1.66, )"
+            },
             "FluentMigrator": {
               "target": "Package",
               "version": "[7.0.0, )"

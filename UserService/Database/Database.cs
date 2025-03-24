@@ -21,6 +21,7 @@ public class Connection
         var dataSourceBuilder = new NpgsqlDataSourceBuilder(builder.ConnectionString);
         
         dataSourceBuilder.MapComposite<User>();
+        dataSourceBuilder.EnableDynamicJson();
         _dbConnection = dataSourceBuilder.Build();
     }
 
