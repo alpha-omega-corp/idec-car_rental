@@ -30,25 +30,37 @@ public class UserController(
     
     [HttpPost]
     [Route(template: "login")]
-    public IActionResult Login([FromBody] Login user)
+    public IActionResult Login([FromBody] Login login)
     {
-        var email = userRepository.GetOne(user.Email).Email;
-        logger.LogInformation("email {@email}", email);
-        
-        var claims = new List<Claim> {
-            new(ClaimTypes.NameIdentifier, user.Email),
-        };
-        var jwtToken = new JwtSecurityToken(
-            claims: claims,
-            notBefore: DateTime.UtcNow,
-            expires: DateTime.UtcNow.AddDays(30),
-            signingCredentials: new SigningCredentials(
-                new SymmetricSecurityKey(
-                    Encoding.UTF8.GetBytes(Configuration.GetEnvironment("JWT_SECRET"))
-                ),
-                SecurityAlgorithms.HmacSha256Signature)
-        );
-        return Ok(new JwtSecurityTokenHandler().WriteToken(jwtToken));
+        var user = userRepository.GetOne(login.Email);
 
+        if (!BCrypt.Net.BCrypt.Verify(login.Password, user.Password)) return Empty;
+        
+        var key = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(Configuration.GetEnvironment("JWT_SECRET")));
+        var credentials = new SigningCredentials(key, SecurityAlgorithms.HmacSha256);
+
+        var token = new JwtSecurityToken(
+            issuer: "your_issuer",
+            audience: "your_audience",
+            claims: new List<Claim>(),
+            expires: DateTime.Now.AddMinutes(30),
+            signingCredentials: credentials);
+        
+        return Ok(token.EncodedPayload);
+    }
+
+    [HttpGet]
+    [Route(template: "test")]
+    public IActionResult Test()
+    {
+        return Ok();
+    }
+
+    private static ClaimsIdentity GenerateClaims(User user)
+    {
+        var claims = new ClaimsIdentity();
+        claims.AddClaim(new Claim(ClaimTypes.Name, user.Email));
+
+        return claims;
     }
 }

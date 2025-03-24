@@ -17,6 +17,15 @@
       "DownstreamHostAndPorts": [
         { "Host": "localhost", "Port": 5200 }
       ]
+    },
+    {
+      "UpstreamHttpMethod": [ "Get" ],
+      "UpstreamPathTemplate": "/test",
+      "DownstreamPathTemplate": "/users/test",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        { "Host": "localhost", "Port": 5200 }
+      ]
     }
   ],
   "GlobalConfiguration": {

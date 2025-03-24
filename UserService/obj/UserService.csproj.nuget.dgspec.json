@@ -1,25 +1,31 @@
 {
   "format": 1,
   "restore": {
-    "/home/nanstis/RiderProjects/CarRental/UserService/UserService.csproj": {}
+    "C:\\Users\\nicoa\\RiderProjects\\idec-car_rental\\UserService\\UserService.csproj": {}
   },
   "projects": {
-    "/home/nanstis/RiderProjects/CarRental/UserService/UserService.csproj": {
+    "C:\\Users\\nicoa\\RiderProjects\\idec-car_rental\\UserService\\UserService.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/home/nanstis/RiderProjects/CarRental/UserService/UserService.csproj",
+        "projectUniqueName": "C:\\Users\\nicoa\\RiderProjects\\idec-car_rental\\UserService\\UserService.csproj",
         "projectName": "UserService",
-        "projectPath": "/home/nanstis/RiderProjects/CarRental/UserService/UserService.csproj",
-        "packagesPath": "/home/nanstis/.nuget/packages/",
-        "outputPath": "/home/nanstis/RiderProjects/CarRental/UserService/obj/",
+        "projectPath": "C:\\Users\\nicoa\\RiderProjects\\idec-car_rental\\UserService\\UserService.csproj",
+        "packagesPath": "C:\\Users\\nicoa\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\nicoa\\RiderProjects\\idec-car_rental\\UserService\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
-          "/home/nanstis/.nuget/NuGet/NuGet.Config"
+          "C:\\Users\\nicoa\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net9.0"
         ],
         "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -92,7 +98,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/home/nanstis/.dotnet/sdk/9.0.200/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.202/PortableRuntimeIdentifierGraph.json"
         }
       }
     }

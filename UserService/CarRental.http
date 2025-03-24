@@ -7,3 +7,8 @@ Accept: application/json
 
 POST {{Host}}/users/login/
 Accept: application/json
+
+###
+
+GET {{Host}}/users/test/
+Accept: application/json
